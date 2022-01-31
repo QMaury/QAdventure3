@@ -1,0 +1,23 @@
+// grid IDs
+// UP
+//      room0 = u-b6
+//      room1 = u-b5
+//      room2 = u-b4
+//      room3 = u-b3
+//      room4 = u-b1
+//      room5 = u-c1
+//      room6 = u-d1
+//      room7 = u-d2
+//      room8 = u-d3
+//      room9 = u-c3
+//      room10 = u-c2
+//      room11 = u-a4
+//
+//DOWN
+//      room0 = d-c1
+//      room1 = d-b1
+//      room2 = d-a1
+//      room3 = d-a2
+//      room4 = d-b2
+//      room5 = d-c2
+//      room6 = d-d2
