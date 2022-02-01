@@ -1,7 +1,6 @@
 /* 2021-13-03 */
 #include <stdio.h>
 #include <stdlib.h>
-
 #include "rooms.h"
 #include "func.h"
 #include "vars.h"
@@ -26,7 +25,7 @@ int evilD = 0;
 int main() {
         x = y = ded = room = 0;
         printf("QAdventure3 0.0.1\nWritten by QMaury\n© 2021-2022");
-        while (!ded && !evilD) {
+        while (!ded || !evilD) {
                 if(x == 0 && y == -1)
                         qExit();
 
@@ -64,7 +63,6 @@ int main() {
                 */
 
                 if(ded==1) {
-                        txtdiv;
                         printf("> You have died.\n> Game over.\n\n1) Try again?\n2) No. Exit\n> ");
                         action=getAction();
                         switch(action) {

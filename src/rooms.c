@@ -32,51 +32,46 @@ char *item;
 int qDirCheck() {
         // this is fucking embarrassing
         
-        if(enemy == NULL) {
-                if(cannorth == 1)
-                        printf("1) Go north\n");
-                if(cansouth == 1)
-                        printf("2) Go south\n");
-                if(canwest == 1)
-                        printf("3) Go west\n");
-                if(caneast == 1)
-                        printf("4) Go east\n");
-                printf("> ");
-                
-                 
-                action = getAction();
-                switch(action) {
-                        case 1:
-                                if(cnrt == 0)
-                                        invalid();
-                                else
-                                        ++y;
-                                break;
-                        case 2:
-                                if(csth == 0)
-                                        invalid();
-                                else
-                                        --y;
-                                break;
-                        case 3:
-                                if(cwst == 0)
-                                        invalid();
-                                else
-                                        --x;
-                                break;
-                        case 4:
-                                if(cest == 0)
-                                        invalid();
-                                else
-                                       ++x;
-                                break;
-                        default:
+        if(cannorth == 1)
+                printf("1) Go north\n");
+        if(cansouth == 1)
+                printf("2) Go south\n");
+        if(canwest == 1)
+                printf("3) Go west\n");
+        if(caneast == 1)
+                printf("4) Go east\n");
+        printf("> ");
+
+         
+        action = getAction();
+        switch(action) {
+                case 1:
+                        if(cnrt == 0)
                                 invalid();
-                                break;
-                }
-        }
-        else {
-                printf("under construction\n");
+                        else
+                                ++y;
+                        break;
+                case 2:
+                        if(csth == 0)
+                                invalid();
+                        else
+                                --y;
+                        break;
+                case 3:
+                        if(cwst == 0)
+                                invalid();
+                        else
+                                --x;
+                        break;
+                case 4:
+                        if(cest == 0)
+                                invalid();
+                        else
+                               ++x;
+                        break;
+                default:
+                        invalid();
+                        break;
         }
         cest = cwst = csth = cnrt = 0;
 }
@@ -119,7 +114,7 @@ void doRoom1() {
         csth = 1;
         
         printf("There is a sword on the floor.\nYou take the sword.\n");
-        sword = 1;
+        sword = 0;
         cont();
 
         printRoom();

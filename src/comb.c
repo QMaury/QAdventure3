@@ -16,7 +16,7 @@ void fight() {
                         if(sword > slimeReq)
                                 printf("You slay the Slime\n");
                         else
-                                printf("You died\n");
+                                ded = 1;
                 }
         }
 }
