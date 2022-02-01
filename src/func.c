@@ -52,4 +52,5 @@ void cont() {
 		case 1:
 			break;
 	}
+        printf("\n");
 }

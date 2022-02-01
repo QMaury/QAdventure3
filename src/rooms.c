@@ -25,6 +25,7 @@ int cannorth = 0;
 int cansouth = 0; 
 int canwest = 0; 
 int caneast = 0;
+int sword = 0;
 
 char *item;
 
@@ -116,6 +117,10 @@ void doRoom1() {
         
         cnrt = 1;
         csth = 1;
+        
+        printf("There is a sword on the floor.\nYou take the sword.\n");
+        sword = 1;
+        cont();
 
         printRoom();
         qDirCheck();
@@ -141,6 +146,8 @@ void doRoom3() {
         csth = 1;
         cest = 1;
 
+        // wtf i fixed it?
+        // i deleted "printRoom()", it started working, I put it back, and now it just works??
         printRoom();
         qDirCheck();
 }
