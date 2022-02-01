@@ -25,7 +25,7 @@ int evilD = 0;
 
 int main() {
         x = y = ded = room = 0;
-        printf("QdevilPages 0.0.1\n");
+        printf("QAdventure3 0.0.1\nWritten by QMaury\n© 2021-2022");
         while (!ded && !evilD) {
                 if(x == 0 && y == -1)
                         qExit();
@@ -38,6 +38,12 @@ int main() {
 
                 if(x == 0 && y == 2)
                         doRoom2();
+
+                if(x == 0 && y == 3)
+                        doRoom3();
+
+                if(x == 0 && y == 4)
+                        doRoom4();
 
                 if(x == -1 && y == 2)
                         doRoom11();

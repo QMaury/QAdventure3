@@ -133,10 +133,10 @@ void doRoom2() {
         printRoom();
         qDirCheck();
 }
+// something fucks up here
 
 void doRoom3() {
         txtdiv ;
-        enemy = NULL;
         cnrt = 1;
         csth = 1;
         cest = 1;
@@ -144,6 +144,18 @@ void doRoom3() {
         printRoom();
         qDirCheck();
 }
+
+void doRoom4() {
+        txtdiv ;
+        enemy = NULL;
+        cnrt = 1;
+        csth = 1;
+
+        printRoom();
+        qDirCheck();
+}
+
+// this looks like shit
 
 void doRoom11() {
         txtdiv ;
