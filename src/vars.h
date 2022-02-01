@@ -8,3 +8,4 @@ extern char *enemy;
 extern char *item;
 
 extern int sword;
+extern int slimeReq;

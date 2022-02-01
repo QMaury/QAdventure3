@@ -65,7 +65,7 @@ int main() {
 
                 if(ded==1) {
                         txtdiv;
-                        printf("> You have failed.\n> Game over.\n\n1) Try again?\n2) No. Exit\n> ");
+                        printf("> You have died.\n> Game over.\n\n1) Try again?\n2) No. Exit\n> ");
                         action=getAction();
                         switch(action) {
                                 case 1:

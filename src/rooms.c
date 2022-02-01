@@ -128,8 +128,15 @@ void doRoom1() {
 
 void doRoom2() {
         txtdiv
-        // enemy = "Slime";
-        enemy = NULL;
+        enemy = "Slime";
+        if(sword > slimeReq) {
+                printf("You have killed the slime!\n");
+                enemy = NULL;
+        }
+        else {
+                printf("The slime attacks!\n");
+                ded = 1;
+        }
 
         cnrt = 1;
         csth = 1;

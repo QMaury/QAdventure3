@@ -7,7 +7,6 @@
 #include "rooms.h"
 
 char *enemy;
-int sword = 0;
 
 int slimeReq = 1;
 
