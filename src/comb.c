@@ -13,7 +13,7 @@ int slimeReq = 1;
 void fight() {
         if(enemy != NULL) {
                 if(enemy == "Slime") {
-                        if(sword >> slimeReq) {
+                        if(sword >= slimeReq) {
                                 printf("You slay the Slime\n");
                         }
                         else

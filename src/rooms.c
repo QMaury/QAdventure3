@@ -109,22 +109,23 @@ void doRoom0() {
 void doRoom1() {
         txtdiv
         enemy = NULL;
+        printRoom();
         
         cnrt = 1;
         csth = 1;
         
         printf("There is a sword on the floor.\nYou take the sword.\n");
-        sword = 0;
+        sword = 1;
         cont();
 
-        printRoom();
         qDirCheck();
 }
 
 void doRoom2() {
         txtdiv
         enemy = "Slime";
-        if(sword > slimeReq) {
+        slimeReq = 1;
+        if(sword >= slimeReq) {
                 printf("You have killed the slime!\n");
                 enemy = NULL;
         }
