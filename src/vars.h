@@ -7,5 +7,7 @@ extern int action;
 extern char *enemy;
 extern char *item;
 
+extern int slimeDed;
+
 extern int sword;
 extern int slimeReq;

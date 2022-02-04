@@ -29,6 +29,8 @@ int sword = 0;
 
 char *item;
 
+int slimeDed = 0;
+
 int qDirCheck() {
         // this is fucking embarrassing
         
@@ -134,14 +136,18 @@ void doRoom2() {
                         break;
         }
         slimeReq = 1;
-        if(sword >= slimeReq) {
+        if(sword >= slimeReq && slimeDed == 0) {
                 printf("You have killed the slime!\n");
+                slimeDed = 1;
                 cont();
                 enemy = NULL;
         }
-        else {
+        else if(sword < slimeReq && slimeDed ==0) {
                 printf("The slime attacks!\n");
                 ded = 1;
+        }
+        else {
+                printf("quux");
         }
 
         cnrt = 1;
