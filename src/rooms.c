@@ -124,8 +124,13 @@ void doRoom1() {
 }
 
 void doRoom2() {
-        txtdiv
-        enemy = "Slime";
+        txtdiv ;
+        if(slimeD == 1) {
+                enemy = "Slime";
+        }
+        else {
+                enemy = NULL;
+        }
         printf("A %s blocks your path!\nDo you fight it?\n1) Yes fight the %s\n2) No, leave the room\n> ", enemy, enemy);
         action = getAction();
         switch(action) {
@@ -141,10 +146,6 @@ void doRoom2() {
                 slimeDed = 1;
                 cont();
                 enemy = NULL;
-        }
-        else if(sword < slimeReq && slimeDed ==0) {
-                printf("The slime attacks!\n");
-                ded = 1;
         }
         else {
                 printf("quux");
