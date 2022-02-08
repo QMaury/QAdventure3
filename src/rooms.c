@@ -115,10 +115,12 @@ void doRoom1() {
         
         cnrt = 1;
         csth = 1;
-        
-        printf("There is a sword on the floor.\nYou take the sword.\n");
-        ++sword;
-        cont();
+
+        if(sword == 0) {
+                printf("There is a sword on the floor.\nYou take the sword.\n");
+                ++sword;
+                cont();
+        }
 
         qDirCheck();
 }
