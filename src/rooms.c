@@ -15,7 +15,6 @@
 #include "func.h"
 #include "comb.h"
 
-#define txtdiv printf("\n|=========================================|\n\n");
 #define cnrt cannorth
 #define csth cansouth
 #define cwst canwest
@@ -72,8 +71,7 @@ int qDirCheck() {
                                ++x;
                         break;
                 default:
-                        invalid();
-                        break;
+                        invalid(); break;
         }
         cest = cwst = csth = cnrt = 0;
 }
@@ -95,7 +93,8 @@ int qFoeCheck() {
 }
 
 void doRoom0() {
-        txtdiv
+        head;
+        txtdiv;
         enemy = NULL;
 
         cannorth = 1; 
@@ -109,7 +108,8 @@ void doRoom0() {
 }
 
 void doRoom1() {
-        txtdiv
+        head;
+        txtdiv;
         enemy = NULL;
         printRoom();
         
@@ -124,6 +124,7 @@ void doRoom1() {
 }
 
 void doRoom2() {
+        head;
         txtdiv ;
         slimeReq = 1;
         enemy = "Slime";
@@ -152,6 +153,7 @@ void doRoom2() {
 // something fucks up here
 
 void doRoom3() {
+        head;
         txtdiv ;
         cnrt = 1;
         csth = 1;
@@ -164,6 +166,7 @@ void doRoom3() {
 }
 
 void doRoom4() {
+        head;
         txtdiv ;
         enemy = NULL;
         cnrt = 1;
@@ -176,10 +179,10 @@ void doRoom4() {
 // this looks like shit
 
 void doRoom11() {
+        head;
         txtdiv ;
         enemy = NULL;
         cest = 1;
-        printRoom();
         
         qDirCheck();
 }

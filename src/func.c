@@ -9,7 +9,7 @@
 #include "vars.h"
 #include "func.h"
 
-#define txtdiv printf("\n|=========================================|\n\n");
+#define txtdiv printf("|=========================================|\n\n");
 
 int contRes;
 
