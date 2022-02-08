@@ -24,6 +24,7 @@ int evilD = 0;
 
 int main() {
         x = y = ded = room = 0;
+        system("clear");
         printf("QAdventure3 0.0.1\nWritten by QMaury\n© 2021-2022");
         while (!ded || !evilD) {
                 if(x == 0 && y == -1)
