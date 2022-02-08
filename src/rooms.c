@@ -117,7 +117,7 @@ void doRoom1() {
         csth = 1;
         
         printf("There is a sword on the floor.\nYou take the sword.\n");
-        sword = 1;
+        ++sword;
         cont();
 
         qDirCheck();
@@ -125,30 +125,21 @@ void doRoom1() {
 
 void doRoom2() {
         txtdiv ;
-        if(slimeD == 1) {
-                enemy = "Slime";
-        }
-        else {
-                enemy = NULL;
-        }
-        printf("A %s blocks your path!\nDo you fight it?\n1) Yes fight the %s\n2) No, leave the room\n> ", enemy, enemy);
-        action = getAction();
-        switch(action) {
-                case 1:
-                        break;
-                case 2:
-                        doRoom1();
-                        break;
-        }
         slimeReq = 1;
-        if(sword >= slimeReq && slimeDed == 0) {
-                printf("You have killed the slime!\n");
-                slimeDed = 1;
-                cont();
-                enemy = NULL;
-        }
-        else {
-                printf("quux");
+        enemy = "Slime";
+        if(slimeDed == 0) {
+                printf("A %s blocks your path!\nDo you fight it?\n1) Yes fight the %s\n2) No, leave the room\n> ", enemy, enemy);
+                action = getAction();
+                switch(action) {
+                        case 1:
+                                slimeDed = 1;
+                                printf("\nYou grab your sword and stab at the %s, successfully killing it!\n", enemy);
+                                break;
+                        case 2:
+                                doRoom1();
+                                break;
+                }
+
         }
 
         cnrt = 1;
