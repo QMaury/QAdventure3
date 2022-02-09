@@ -5,7 +5,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
 #include "vars.h"
 #include "func.h"
 
@@ -26,7 +25,8 @@ void qExit() {
                 case 2:
                     break;
                 default:
-                    invalid();
+                    invalid;
+                    break;
         }
 }
 
@@ -43,10 +43,6 @@ int getAction() {
 
 	fgets(actionString, sizeof(actionString), stdin);
 	return atoi(actionString);;
-}
-
-void invalid() {
-    printf("????\n");
 }
 
 void cont() {

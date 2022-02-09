@@ -10,6 +10,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
 
 #include "vars.h"
 #include "func.h"
@@ -47,31 +48,35 @@ int qDirCheck() {
         action = getAction();
         switch(action) {
                 case 1:
-                        if(cnrt == 0)
-                                invalid();
+                        if(cnrt == 0) {
+                                invalid;
+                        }
                         else
                                 ++y;
                         break;
                 case 2:
-                        if(csth == 0)
-                                invalid();
+                        if(csth == 0) {
+                                invalid;
+                        }
                         else
                                 --y;
                         break;
                 case 3:
-                        if(cwst == 0)
-                                invalid();
+                        if(cwst == 0) {
+                                invalid; 
+                        }
                         else
                                 --x;
                         break;
                 case 4:
-                        if(cest == 0)
-                                invalid();
+                        if(cest == 0) {
+                                invalid
+                        }
                         else
                                ++x;
                         break;
                 default:
-                        invalid();
+                        invalid;
                         break;
         }
         cest = cwst = csth = cnrt = 0;
@@ -148,6 +153,9 @@ void doRoom2() {
                                 printf("\n");
                                 csth = 1;
                                 qDirCheck();
+                                break;
+                        default:
+                                invalid;
                                 break;
                 }
 

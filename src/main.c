@@ -76,7 +76,7 @@ int main() {
                                         exit(0);
                                         break;
                                 default:
-                                        invalid();
+                                        invalid;
                                         break;
                         }
                 } 
