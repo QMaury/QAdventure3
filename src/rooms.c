@@ -102,7 +102,6 @@ void doRoom0() {
         caneast = 0; 
         canwest = 0;
 
-        printRoom();
         qDirCheck();
         
 }
@@ -111,7 +110,6 @@ void doRoom1() {
         head;
         txtdiv;
         enemy = NULL;
-        printRoom();
         
         cnrt = 1;
         csth = 1;
@@ -149,7 +147,6 @@ void doRoom2() {
         csth = 1;
         cwst = 1;
 
-        printRoom();
         qDirCheck();
 }
 // something fucks up here
@@ -161,9 +158,6 @@ void doRoom3() {
         csth = 1;
         cest = 1;
 
-        // wtf i fixed it?
-        // i deleted "printRoom()", it started working, I put it back, and now it just works??
-        printRoom();
         qDirCheck();
 }
 
@@ -174,7 +168,6 @@ void doRoom4() {
         cnrt = 1;
         csth = 1;
 
-        printRoom();
         qDirCheck();
 }
 

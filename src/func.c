@@ -31,6 +31,10 @@ void qExit() {
 }
 
 void printRoom() {
+        printf("You are in room %i, %i\n\n", x, y);
+}
+
+void printRoomH() {
         printf("You are in room %i, %i\n", x, y);
 }
 
