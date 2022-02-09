@@ -184,6 +184,16 @@ void doRoom4() {
         qDirCheck();
 }
 
+void doRoom5() {
+        head;
+        txtdiv;
+        enemy = NULL;
+        
+        cnrt = 1;
+        csth = 1;
+        qDirCheck();
+}
+
 // this looks like shit
 
 void doRoom11() {
@@ -191,6 +201,9 @@ void doRoom11() {
         txtdiv ;
         enemy = NULL;
         cest = 1;
+
+        printf("This room is empty except for an ominous looking staircase leading down to some lower level of the dungeon.\n");
+        printf("You have a sickening feeling that qms has not yet developed this part of the game, so you decide not to go down there.\n\n");
         
         qDirCheck();
 }
