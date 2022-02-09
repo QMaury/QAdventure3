@@ -71,7 +71,8 @@ int qDirCheck() {
                                ++x;
                         break;
                 default:
-                        invalid(); break;
+                        invalid();
+                        break;
         }
         cest = cwst = csth = cnrt = 0;
 }
@@ -129,25 +130,37 @@ void doRoom2() {
         slimeReq = 1;
         enemy = "Slime";
         if(slimeDed == 0) {
-                printf("A %s blocks your path!\nDo you fight it?\n1) Yes fight the %s\n2) No, leave the room\n> ", enemy, enemy);
+                printf("A %s blocks your path!\nDo you fight it?\n\n1) Yes fight the %s\n2) No, leave the room\n> ", enemy, enemy);
                 action = getAction();
                 switch(action) {
                         case 1:
+                                head;
+                                txtdiv;
+                                printf("You grab your sword and stab at the %s, successfully killing it!\n\n", enemy);
                                 slimeDed = 1;
-                                printf("\nYou grab your sword and stab at the %s, successfully killing it!\n", enemy);
+
+                                cnrt = 1;
+                                csth = 1;
+                                cwst = 1;
+                                qDirCheck();
                                 break;
                         case 2:
-                                doRoom1();
+                                printf("\n");
+                                csth = 1;
+                                qDirCheck();
                                 break;
                 }
 
         }
+        else if(slimeDed == 1) { 
+                printf("This room has nothing but a sticky green puddle on the ground.\n\n");
 
-        cnrt = 1;
-        csth = 1;
-        cwst = 1;
+                cnrt = 1;
+                csth = 1;
+                cwst = 1;
+                qDirCheck();
+        }
 
-        qDirCheck();
 }
 // something fucks up here
 
