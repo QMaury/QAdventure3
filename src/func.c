@@ -13,12 +13,15 @@
 int contRes;
 
 void qExit() {
+        head;
         txtdiv;
-        printf("Exit?\n\n1) Yes\n2) No\n> ");
+        printf("Exit the dungeon?\n\n1) Yes\n2) No\n> ");
         action = getAction();
         switch(action) {
                 case 1:
-                    printf("\nGoodbye!");
+                    head;
+                    txtdiv;
+                    printf("Goodbye!\n");
                     cont();
                     exit(0);
                     break;
