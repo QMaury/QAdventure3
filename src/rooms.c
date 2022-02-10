@@ -1,12 +1,3 @@
-/* 2021-12-20   23:36
- * written by QMS 
- * */
-
-/* I do not feel like coding right now but, I have been too lazy for too long. look at me go.
- * 2021-12-20   23:38
- * - QMS 
- * */
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -32,8 +23,6 @@ char *item;
 int slimeDed = 0;
 
 int qDirCheck() {
-        // this is fucking embarrassing
-        
         if(cannorth == 1)
                 printf("1) Go north\n");
         if(cansouth == 1)
@@ -94,7 +83,6 @@ int qFoeCheck() {
         }
         else { 
                 printf("This room has no enemies.\n");
-                // printf("");
         }
 }
 
@@ -170,7 +158,6 @@ void doRoom2() {
         }
 
 }
-// something fucks up here
 
 void doRoom3() {
         head;
@@ -201,8 +188,6 @@ void doRoom5() {
         csth = 1;
         qDirCheck();
 }
-
-// this looks like shit
 
 void doRoom11() {
         head;
