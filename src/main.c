@@ -48,7 +48,6 @@ int main() {
                         
                 /*
                 switch(room) {
-                        // fuck
                         case 0:
                                 doRoom0();
                                 break;
