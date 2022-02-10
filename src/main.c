@@ -19,7 +19,6 @@ int x, y;
  * 2021-12-20   00:19
  * -QMS
  */
-
 int evilD = 0;
 
 int main() {
