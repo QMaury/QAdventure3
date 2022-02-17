@@ -12,6 +12,8 @@
 int room;
 int ded;
 int action;
+int optchr;
+int h;
 
 int x, y;
 
@@ -21,7 +23,7 @@ int x, y;
  */
 int evilD = 0;
 
-int main() {
+int main(void) {
         x = y = ded = room = 0;
         while (!ded || !evilD) {
                 if(x == 0 && y == -1)

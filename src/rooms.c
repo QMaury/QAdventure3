@@ -22,81 +22,101 @@ char *item;
 
 int slimeDed = 0;
 
-int qDirCheck() {
-        if(cannorth == 1)
-                printf("1) Go north\n");
-        if(cansouth == 1)
-                printf("2) Go south\n");
-        if(canwest == 1)
-                printf("3) Go west\n");
-        if(caneast == 1)
-                printf("4) Go east\n");
-        printf("> ");
-
-         
+int qvprmpt() {
+        printf("What to do?\n1) Move\n2) Look\n3) Use\n4) Attack\n> ");
         action = getAction();
         switch(action) {
                 case 1:
-                        if(cnrt == 0) {
-                                invalid;
+                        printf("\nWhich direction?\n"); // one direction B-)
+                        if(cannorth == 1)
+                                printf("1) Go north\n");
+                        if(cansouth == 1)
+                                printf("2) Go south\n");
+                        if(canwest == 1)
+                                printf("3) Go west\n");
+                        if(caneast == 1)
+                                printf("4) Go east\n");
+                        printf("> ");
+
+                         
+                        action = getAction();
+                        switch(action) {
+                                case 1:
+                                        if(cnrt == 0) {
+                                                invalid;
+                                        }
+                                        else
+                                                ++y;
+                                        break;
+                                case 2:
+                                        if(csth == 0) {
+                                                invalid;
+                                        }
+                                        else
+                                                --y;
+                                        break;
+                                case 3:
+                                        if(cwst == 0) {
+                                                invalid; 
+                                        }
+                                        else
+                                                --x;
+                                        break;
+                                case 4:
+                                        if(cest == 0) {
+                                                invalid
+                                        }
+                                        else
+                                               ++x;
+                                        break;
+                                default:
+                                        invalid;
+                                        break;
                         }
-                        else
-                                ++y;
-                        break;
-                case 2:
-                        if(csth == 0) {
-                                invalid;
-                        }
-                        else
-                                --y;
-                        break;
-                case 3:
-                        if(cwst == 0) {
-                                invalid; 
-                        }
-                        else
-                                --x;
-                        break;
-                case 4:
-                        if(cest == 0) {
-                                invalid
-                        }
-                        else
-                               ++x;
-                        break;
-                default:
-                        invalid;
-                        break;
+                        cest = cwst = csth = cnrt = 0;
+                break;
+
+        case 2:
+                printf("\nLook at what?\n1)");
+                if(item != NULL) {
+                        printf("Look at %s", item);
+                }
+                if(enemy != NULL) {
+                        printf("Look at %s", enemy);
+                }
+                else if(enemy != NULL && item != NULL) {
+                        printf("2) Look at %s", enemy);
+                }
+                printf("> ");
+                // i am a moron. Fix this later
+                enemy = item = NULL;
+                break;
+        case 3:
+                printf("foo\n");
         }
-        cest = cwst = csth = cnrt = 0;
 }
-
-int qItemCheck() {
-        if(item != NULL) 
-                puts("quux");
-}
-
+/*
 int qFoeCheck() {
         if(enemy != NULL){
                 printf("A %s blocks your path.\n", enemy);
-                /* "oof. maybe this'll work??"          2021-12-25      09:23   QMS */
         }
         else { 
                 printf("This room has no enemies.\n");
         }
 }
-
+*/
 void doRoom0() {
         head;
         txtdiv;
-        enemy = NULL;
+        enemy = "foo";
+        item = "bar";
 
         cannorth = 1; 
         cansouth = 1; 
         caneast = 0; 
         canwest = 0;
 
-        qDirCheck();
+        qvprmpt();
         
 }
 
@@ -114,7 +134,7 @@ void doRoom1() {
                 cont();
         }
 
-        qDirCheck();
+        qvprmpt();
 }
 
 void doRoom2() {
@@ -135,12 +155,12 @@ void doRoom2() {
                                 cnrt = 1;
                                 csth = 1;
                                 cwst = 1;
-                                qDirCheck();
+                                qvprmpt();
                                 break;
                         case 2:
                                 printf("\n");
                                 csth = 1;
-                                qDirCheck();
+                                qvprmpt();
                                 break;
                         default:
                                 invalid;
@@ -154,7 +174,7 @@ void doRoom2() {
                 cnrt = 1;
                 csth = 1;
                 cwst = 1;
-                qDirCheck();
+                qvprmpt();
         }
 
 }
@@ -166,7 +186,7 @@ void doRoom3() {
         csth = 1;
         cest = 1;
 
-        qDirCheck();
+        qvprmpt();
 }
 
 void doRoom4() {
@@ -176,7 +196,7 @@ void doRoom4() {
         cnrt = 1;
         csth = 1;
 
-        qDirCheck();
+        qvprmpt();
 }
 
 void doRoom5() {
@@ -186,7 +206,7 @@ void doRoom5() {
         
         cnrt = 1;
         csth = 1;
-        qDirCheck();
+        qvprmpt();
 }
 
 void doRoom11() {
@@ -198,5 +218,5 @@ void doRoom11() {
         printf("This room is empty except for an ominous looking staircase leading down to some lower level of the dungeon.\n");
         printf("You have a sickening feeling that qms has not yet developed this part of the game, so you decide not to go down there.\n\n");
         
-        qDirCheck();
+        qvprmpt();
 }

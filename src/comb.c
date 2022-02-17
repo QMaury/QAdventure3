@@ -9,7 +9,7 @@
 char *enemy;
 
 int slimeReq = 1;
-
+/*
 void fight() {
         if(enemy != NULL) {
                 if(enemy == "Slime") {
@@ -21,3 +21,4 @@ void fight() {
                 }
         }
 }
+*/
