@@ -77,6 +77,7 @@ int qvprmpt() {
                 break;
 
         case 2:
+                // why the fuck does this print before the header?
                 printf("\nLook at what?\n1)");
                 if(item != NULL) {
                         printf("Look at %s", item);
