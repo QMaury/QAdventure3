@@ -17,15 +17,19 @@ int cansouth = 0;
 int canwest = 0; 
 int caneast = 0;
 int sword = 0;
+int verb;
+int lResp;
 
 char *item;
 
 int slimeDed = 0;
 
 int qvprmpt() {
+        head;
+        txtdiv;
         printf("What to do?\n1) Move\n2) Look\n3) Use\n4) Attack\n> ");
-        action = getAction();
-        switch(action) {
+        verb = getAction();
+        switch(verb) {
                 case 1:
                         printf("\nWhich direction?\n"); // one direction B-)
                         if(cannorth == 1)
@@ -74,26 +78,40 @@ int qvprmpt() {
                                         break;
                         }
                         cest = cwst = csth = cnrt = 0;
-                break;
+                        break;
 
-        case 2:
-                // why the fuck does this print before the header?
-                printf("\nLook at what?\n1)");
-                if(item != NULL) {
-                        printf("Look at %s", item);
-                }
-                if(enemy != NULL) {
-                        printf("Look at %s", enemy);
-                }
-                else if(enemy != NULL && item != NULL) {
-                        printf("2) Look at %s", enemy);
-                }
-                printf("> ");
-                // i am a moron. Fix this later
-                enemy = item = NULL;
-                break;
-        case 3:
-                printf("foo\n");
+                case 2:
+                        // why the fuck does this print before the header?
+                        clear;
+                        head;
+                        txtdiv;
+                        printf("Look at what?\n1)");
+                        if(item != NULL) {
+                                printf(" Look at %s\n", item);
+                        }
+
+                        if(enemy != NULL && item != NULL) 
+                                printf("2) ");
+                        if(enemy != NULL) {
+                                printf("Look at %s\n", enemy);
+                        }
+                        printf("> ");
+
+                        lResp = getAction();
+                        switch(lResp) {
+                                case 1:
+                                        printf("%s\n", item);
+                                        break;
+                                default:
+                                        invalid;
+                                        break;
+                        }
+                        // i am a moron. Fix this later
+                        enemy = item = NULL;
+                        break;
+                case 3:
+                        printf("foo\n");
+                        break;
         }
 }
 /*
@@ -107,8 +125,6 @@ int qFoeCheck() {
 }
 */
 void doRoom0() {
-        head;
-        txtdiv;
         enemy = "foo";
         item = "bar";
 
@@ -122,6 +138,7 @@ void doRoom0() {
 }
 
 void doRoom1() {
+        clear;
         head;
         txtdiv;
         enemy = NULL;
@@ -139,6 +156,7 @@ void doRoom1() {
 }
 
 void doRoom2() {
+        clear;
         head;
         txtdiv ;
         slimeReq = 1;
@@ -181,6 +199,7 @@ void doRoom2() {
 }
 
 void doRoom3() {
+        clear;
         head;
         txtdiv ;
         cnrt = 1;

@@ -12,13 +12,19 @@
 
 int contRes;
 
+void qcheckItem() {
+        printf("%s\n", item);
+}
+
 void qExit() {
+        clear;
         head;
         txtdiv;
         printf("Exit the dungeon?\n\n1) Yes\n2) No\n> ");
         action = getAction();
         switch(action) {
                 case 1:
+                    clear;
                     head;
                     txtdiv;
                     printf("Goodbye!\n");
