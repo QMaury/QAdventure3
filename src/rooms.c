@@ -81,7 +81,6 @@ int qvprmpt() {
                         break;
 
                 case 2:
-                        // why the fuck does this print before the header?
                         clear;
                         head;
                         txtdiv;
@@ -100,7 +99,7 @@ int qvprmpt() {
                         lResp = getAction();
                         switch(lResp) {
                                 case 1:
-                                        printf("%s\n", item);
+                                        qcheckItem();
                                         break;
                                 default:
                                         invalid;
