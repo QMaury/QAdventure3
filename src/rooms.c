@@ -32,6 +32,9 @@ void qcheckItem() {
                 printf("bar is brown and slimy\n");  // lol
                 cont();
         }
+        if(item == "sword") {
+                printf("The sword on the floor sits there
+        }
         else {
                 printf("what the fuck is that thing bro? I never saw anything like that b4\n");
                 cont();
@@ -112,33 +115,57 @@ int qvprmpt() {
                                 printf(" Look at %s\n", item);
                         }
 
-                        if(enemy != NULL && item != NULL) 
-                                printf("2) ");
+                        printf("2) ");
                         if(enemy != NULL) {
                                 printf("Look at %s\n", enemy);
                         }
+                        else 
+                                printf("Look at the room\n");
                         if(enemy != NULL && item != NULL) 
                                 printf("3) Look at the room\n");
                         printf("> ");
 
-                        lResp = getAction();
-                        switch(lResp) {
-                                case 1:
-                                        qcheckItem();
-                                        break;
-                                case 3:
-                                        qcheckRoom();
-                                        break;
+                        if(enemy != NULL) {
+                                lResp = getAction();
+                                switch(lResp) {
+                                        case 1:
+                                                qcheckItem();
+                                                break;
+                                        case 2:
+                                                printf("ehh scary enemy\n"); // TODO
+                                                cont();
+                                                break;
+                                        case 3:
+                                                qcheckRoom();
+                                                break;
 
-                                default:
-                                        invalid;
-                                        break;
+                                        default:
+                                                invalid;
+                                                break;
+                                }
+                        }
+
+                        else {
+                                lResp = getAction();
+                                switch(lResp) {
+                                        case 1:
+                                                qcheckItem();
+                                                break;
+                                        case 2:
+                                                qcheckRoom();
+                                                break;
+
+                                        default:
+                                                invalid;
+                                                break;
+                                }
                         }
                         // i am a moron. Fix this later
                         enemy = item = NULL;
                         break;
                 case 3:
                         printf("foo\n");
+                        cont();
                         break;
         }
 }
@@ -154,8 +181,8 @@ int qFoeCheck() {
 */
 
 void doRoom0() {
+        enemy = NULL;
         room = 0;
-        enemy = "foo";
         item = "bar";
 
         cannorth = 1; 
@@ -173,16 +200,11 @@ void doRoom1() {
         txtdiv;
 
         room = 1;
+        item = "sword";
         enemy = NULL;
         
         cnrt = 1;
         csth = 1;
-
-        if(sword == 0) {
-                printf("There is a sword on the floor.\nYou take the sword.\n");
-                ++sword;
-                cont();
-        }
 
         qvprmpt();
 }
