@@ -34,12 +34,13 @@ void qcheckItem() {
         }
         else {
                 printf("what the fuck is that thing bro? I never saw anything like that b4\n");
+                cont();
         }
 }
 
 void qcheckRoom() {
         if(room == 0) {
-                printf("You are at the entrance to the cave. There are 2 passages to the north and to the south.\n");
+                printf("You are at the entrance to the cave. You can travel north or south from here.\n");
                 cont();
         }
 }
