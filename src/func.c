@@ -12,18 +12,6 @@
 
 int contRes;
 
-void qcheckItem() {
-        // rewrite this at some point when less autistic
-        // maybe make use of enums somehow
-
-        if(item == "bar") {
-                printf("bar is brown and slimy\n");  // lol
-                cont();
-        }
-        else {
-                printf("what the fuck is that thing bro? I never saw anything like that b4\n");
-        }
-}
 
 void qExit() {
         clear;

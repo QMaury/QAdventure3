@@ -10,5 +10,4 @@ void txtdvd();
 void cont();
 void printRoom();
 void qExit();
-void qcheckItem();
 void printRoomH();

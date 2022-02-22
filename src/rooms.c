@@ -19,12 +19,34 @@ int caneast = 0;
 int sword = 0;
 int verb;
 int lResp;
+int room;
 
 char *item;
 
 int slimeDed = 0;
 
+void qcheckItem() {
+        // rewrite this at some point when less autistic
+        // maybe make use of enums somehow
+        if(item == "bar") {
+                printf("bar is brown and slimy\n");  // lol
+                cont();
+        }
+        else {
+                printf("what the fuck is that thing bro? I never saw anything like that b4\n");
+        }
+}
+
+void qcheckRoom() {
+        if(room == 0) {
+                printf("You are at the entrance to the cave. There are 2 passages to the north and to the south.\n");
+                cont();
+        }
+}
+
+
 int qvprmpt() {
+        clear;
         head;
         txtdiv;
         printf("What to do?\n1) Move\n2) Look\n3) Use\n4) Attack\n> ");
@@ -94,6 +116,8 @@ int qvprmpt() {
                         if(enemy != NULL) {
                                 printf("Look at %s\n", enemy);
                         }
+                        if(enemy != NULL && item != NULL) 
+                                printf("3) Look at the room\n");
                         printf("> ");
 
                         lResp = getAction();
@@ -101,6 +125,10 @@ int qvprmpt() {
                                 case 1:
                                         qcheckItem();
                                         break;
+                                case 3:
+                                        qcheckRoom();
+                                        break;
+
                                 default:
                                         invalid;
                                         break;
@@ -123,7 +151,9 @@ int qFoeCheck() {
         }
 }
 */
+
 void doRoom0() {
+        room = 0;
         enemy = "foo";
         item = "bar";
 
@@ -140,6 +170,8 @@ void doRoom1() {
         clear;
         head;
         txtdiv;
+
+        room = 1;
         enemy = NULL;
         
         cnrt = 1;
@@ -159,6 +191,7 @@ void doRoom2() {
         head;
         txtdiv ;
         slimeReq = 1;
+        room = 2;
         enemy = "Slime";
         if(slimeDed == 0) {
                 printf("A %s blocks your path!\nDo you fight it?\n\n1) Yes fight the %s\n2) No, leave the room\n> ", enemy, enemy);
@@ -201,6 +234,7 @@ void doRoom3() {
         clear;
         head;
         txtdiv ;
+        room = 3; 
         cnrt = 1;
         csth = 1;
         cest = 1;

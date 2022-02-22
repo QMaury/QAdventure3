@@ -9,7 +9,6 @@
  * 2021-12-20   00:01
  * -QMS
  */
-int room;
 int ded;
 int action;
 int optchr;
