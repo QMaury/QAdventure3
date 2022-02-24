@@ -27,18 +27,17 @@ int slimeDed = 0;
 
 void qcheckItem() {
         // rewrite this at some point when less autistic
-        // maybe make use of enums somehow
+        // TODO
         if(item == "bar") {
                 printf("bar is brown and slimy\n");  // lol
-                cont();
         }
-        if(item == "sword") {
-                printf("The sword on the floor sits there
+        else if(item == "sword") {
+                printf("The sword on the floor sits there, unused.\n");
         }
         else {
                 printf("what the fuck is that thing bro? I never saw anything like that b4\n");
-                cont();
         }
+        cont();
 }
 
 void qcheckRoom() {
@@ -65,7 +64,7 @@ int qvprmpt() {
                         if(canwest == 1)
                                 printf("3) Go west\n");
                         if(caneast == 1)
-                                printf("4) Go east\n");
+                                printf("4) Go east\n"); // TODO "how to update variables in header file C"
                         printf("> ");
 
                          
@@ -132,7 +131,7 @@ int qvprmpt() {
                                                 qcheckItem();
                                                 break;
                                         case 2:
-                                                printf("ehh scary enemy\n"); // TODO
+                                                printf("ehh scary %s\n", enemy); // TODO
                                                 cont();
                                                 break;
                                         case 3:
@@ -164,7 +163,7 @@ int qvprmpt() {
                         enemy = item = NULL;
                         break;
                 case 3:
-                        printf("foo\n");
+                        printf("UNDER CONSTRUCTION\n");
                         cont();
                         break;
         }
