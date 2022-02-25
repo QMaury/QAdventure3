@@ -4,6 +4,7 @@
 #include <time.h>
 
 #include "vars.h"
+#include "inventory.h"
 #include "func.h"
 #include "comb.h"
 
@@ -41,10 +42,16 @@ void qcheckItem() {
 }
 
 void qcheckRoom() {
-        if(room == 0) {
-                printf("You are at the entrance to the cave. You can travel north or south from here.\n");
-                cont();
+        // yay :-)
+        switch(room) {
+                case 0:
+                        printf("You are at the entrance to the cave. You can travel north or south from here.\n");
+                        break;
+                default:
+                        printf("where are you??");
+                        break;
         }
+        cont();
 }
 
 
@@ -64,7 +71,7 @@ int qvprmpt() {
                         if(canwest == 1)
                                 printf("3) Go west\n");
                         if(caneast == 1)
-                                printf("4) Go east\n"); // TODO "how to update variables in header file C"
+                                printf("4) Go east\n"); // TODO just `return`, dipshit
                         printf("> ");
 
                          
@@ -163,8 +170,7 @@ int qvprmpt() {
                         enemy = item = NULL;
                         break;
                 case 3:
-                        printf("UNDER CONSTRUCTION\n");
-                        cont();
+                        inventory();
                         break;
         }
 }
