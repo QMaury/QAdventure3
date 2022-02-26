@@ -20,6 +20,7 @@ int caneast = 0;
 int sword = 0;
 int verb;
 int lResp;
+int uResp;
 int room;
 
 char *item;
@@ -170,7 +171,15 @@ int qvprmpt() {
                         enemy = item = NULL;
                         break;
                 case 3:
-                        inventory();
+                        printf("1) Use something from your inventory\n");
+                        // TODO add way to identify items in a room as usable or not
+                        // check notebook for more detail
+                        uResp = getAction();
+                        switch(uResp) {
+                                case 1: 
+                                        inventory();
+                                        break;
+                        }
                         break;
         }
 }
