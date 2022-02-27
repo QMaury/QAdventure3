@@ -4,6 +4,7 @@
 #include <time.h>
 
 #include "vars.h"
+#include "speech.h"
 #include "inventory.h"
 #include "func.h"
 #include "comb.h"
@@ -12,6 +13,7 @@
 #define csth cansouth
 #define cwst canwest
 #define cest caneast
+#define cht clear; head; txtdiv
 
 int cannorth = 0;
 int cansouth = 0; 
@@ -57,10 +59,7 @@ void qcheckRoom() {
 
 
 int qvprmpt() {
-        clear;
-        head;
-        txtdiv;
-        printf("What to do?\n1) Move\n2) Look\n3) Use\n4) Attack\n> ");
+        printf("What to do?\n1) Move\n2) Look\n3) Use\n4) Attack\n5) Talk\n> ");
         verb = getAction();
         switch(verb) {
                 case 1:
@@ -181,6 +180,12 @@ int qvprmpt() {
                                         break;
                         }
                         break;
+                case 5:
+                        qtalk(npc);
+                        break;
+                default:
+                        invalid;
+                        break;
         }
 }
 /*
@@ -195,14 +200,19 @@ int qFoeCheck() {
 */
 
 void doRoom0() {
+        cht;
+
         enemy = NULL;
         room = 0;
+        npc = 1; // TODO cannot leave room unless talked to first npc and gave ur name
         item = "bar";
 
         cannorth = 1; 
         cansouth = 1; 
         caneast = 0; 
         canwest = 0;
+
+        printf("There is a man sitting down on a stone.\n\n");
 
         qvprmpt();
         

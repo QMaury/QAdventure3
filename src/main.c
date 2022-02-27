@@ -24,6 +24,8 @@ int evilD = 0;
 
 int main(void) {
         clear;
+        head;
+        txtdiv;
         x = y = ded = room = 0;
         while (!ded || !evilD) {
                 if(x == 0 && y == -1)

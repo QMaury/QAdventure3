@@ -41,7 +41,7 @@ void printRoom() {
 }
 
 void printRoomH() {
-        printf("You are in room %i, %i\n", x, y);
+        printf("  You are in room %i, %i\n", x, y);
 }
 
 int getAction() {
