@@ -9,12 +9,16 @@ int npc;
 int have = 0;
 
 int qGetPlayerName() {
-        char playername[100] = ""; // TODO make this less retarded
+        char playername[50] = ""; // TODO make this less retarded
                                    
         printf("What is your name?\n");
-        fgets(playername, 100, stdin);
+        fgets(playername, 50, stdin);
 	playername[strlen(playername)-1] = '\0';
-        printf("\n\nYour name is %s.", playername);
+        if(playername == "Dude" || playername == "dude" || playername == "DUDE")
+                printf("\n%s. Now that's a name no one would self apply where I come from.\n", playername);
+        else
+                printf("\n%s, huh? Nice name.", playername);
+        cont();
 }
 
 int qtalk1() {
