@@ -11,7 +11,7 @@ int have = 0;
 int qGetPlayerName() {
         char playername[50] = ""; // TODO make this less retarded
                                    
-        printf("What is your name?\n");
+        printf("What is your name?\n> ");
         fgets(playername, 50, stdin);
 	playername[strlen(playername)-1] = '\0';
         if(playername == "Dude" || playername == "dude" || playername == "DUDE")
