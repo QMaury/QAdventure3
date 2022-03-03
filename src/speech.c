@@ -7,9 +7,9 @@
 
 int npc;
 int have = 0;
+char playername[51] = "";
 
 int qGetPlayerName() {
-        char playername[51] = "";
         char dude[5] = "dude";
                                    
         printf("What is your name?\n> ");
@@ -31,7 +31,7 @@ int qtalk1() {
                 have = 1;
         }
         else {
-                printf("put something here later\n");
+                printf("Hello, %s.\n",playername);
                 cont();
         }
 }
