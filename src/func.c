@@ -4,6 +4,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
 #include "vars.h"
 #include "func.h"
@@ -57,6 +58,8 @@ void cont() {
 	switch(contRes) {
 		case 1:
 			break;
+                default:
+                        break;
 	}
         printf("\n");
 }

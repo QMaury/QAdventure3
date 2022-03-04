@@ -5,6 +5,9 @@
 #define invalid printf("???\n"); sleep(1.7);
 #define clear system("clear");
 
+extern int have;
+extern char playername[51];
+
 int getAction();
 void txtdvd();
 void cont();
