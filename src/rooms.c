@@ -8,6 +8,7 @@
 #include "inventory.h"
 #include "func.h"
 #include "comb.h"
+#include "cheat.h"
 
 #define cnrt cannorth
 #define csth cansouth
@@ -182,6 +183,9 @@ int qvprmpt() {
                         break;
                 case 5:
                         qtalk(npc);
+                        break;
+                case 22200: 
+                        qcheatmode();
                         break;
                 default:
                         invalid;
