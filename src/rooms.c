@@ -22,7 +22,9 @@ int canwest = 0;
 int caneast = 0;
 int sword = 0;
 int verb;
+char *canTalk1, *canTalk2, *canTalk3, *canTalk4;
 int lResp;
+int sResp;
 int uResp;
 int room;
 
@@ -182,7 +184,8 @@ int qvprmpt() {
                         }
                         break;
                 case 5:
-                        qtalk(npc);
+                        //TODO this is shit
+                        qtprompt(npc);
                         break;
                 case 22200: 
                         qcheatmode();
@@ -208,8 +211,9 @@ void doRoom0() {
 
         enemy = NULL;
         room = 0;
-        npc = 1; // TODO cannot leave room unless talked to first npc and gave ur name
+        // int npc = 1; // TODO cannot leave room unless talked to first npc and gave ur name
         item = "bar";
+        canTalk1 = "Walter";
 
         cannorth = 1; 
         cansouth = 1; 

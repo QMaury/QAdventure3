@@ -1,11 +1,15 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include "func.h"
 #include "rooms.h"
 #include "vars.h"
 #include "speech.h"
 
+#define qtalk1() walter()
+
 int npc;
+int quux; // for strcasecmp();
 int have = 0;
 char playername[51] = "";
 
@@ -49,10 +53,45 @@ int qtalk1() {
         }
 }
 
+/*
+int qctstr(int foo) { // cantalk
+        quux = strcasecmp(foo, "walter");
+        if(quux != 0)
+                quux = strcasecmp(canTalk1, "lol");
+}
+*/
+
 int qtalk(int npc) {
         switch(npc) {
                 case 1:
-                        qtalk1();
+                        walter();
+                        break;
+                default:
+                        invalid;
                         break;
         }
+}
+
+int qtprompt() {
+        printf("\nTalk to whom?\n");
+        if(canTalk1 != NULL)
+                printf("1) Talk to %s\n", canTalk1);
+        if(canTalk2 != NULL)
+                printf("2) Talk to %s\n", canTalk2);
+        if(canTalk3 != NULL)
+                printf("3) Talk to %s", canTalk3);
+        if(canTalk4 != NULL)
+                printf("4) Talk to %s", canTalk4);
+        printf("> ");
+        sResp = getAction(); 
+        switch(sResp) {
+                case 1:
+                        qtalk(1);
+                        break;
+                default:
+                        invalid;
+                        break;
+        }
+
+                
 }

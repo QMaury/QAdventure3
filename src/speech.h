@@ -1,6 +1,9 @@
 #define qtalk1() qtalk1() // in case i change name
 
-int qtalk(int npc);
+int qtprompt();
 int qGetPlayerName();
+
+extern char *canTalk1, *canTalk2, *canTalk3, *canTalk4;
+extern int sResp;
 
 extern int npc;
