@@ -206,14 +206,19 @@ int qFoeCheck() {
 }
 */
 
+
 void doRoom0() {
         cht;
 
+        if(have[1] != 1) 
+                canTalk1 = "the man sitting on the stone";
+        else
+                canTalk1 = "Walter";
+                
         enemy = NULL;
         room = 0;
         // int npc = 1; // TODO cannot leave room unless talked to first npc and gave ur name
         item = "bar";
-        canTalk1 = "Walter";
 
         cannorth = 1; 
         cansouth = 1; 

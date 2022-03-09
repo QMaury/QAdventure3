@@ -11,3 +11,5 @@ extern int slimeDed;
 
 extern int sword;
 extern int slimeReq;
+
+extern int npc;
