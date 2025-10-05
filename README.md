@@ -1,8 +1,7 @@
 # QAdventure3
 A text based adventure game written in C.
 Sequel to QAdventure2 (obviously)
-# I am now revisiting this repo after a few years of doing other work, not programming.
-# Completely forgot this is completely unfinished. I guess it's back to work on QAdventure3.
+# I am now revisiting this repo after a few years of doing other work, not programming. Completely forgot this is completely unfinished. I guess it's back to work on QAdventure3.
 
 # What?
 In the finished QAdventure3 (working title), you will navigate through multi-level dungeons, battle fantasy creatures, finish quests 
