@@ -10,4 +10,4 @@ In it's current state, this is barely a game. QAdventure3 right now is more like
 
 You are still free to go ahead and compile the game, play it yourself, and marvel at my fantastic over-use of `if` statements.
 
-If you do not like my code, I sympathize with you; I don't like my code either. So I implore you, send a pull request if you feel so inclined.
+If you do not like my code, I sympathize with you; I don't like my code either. So I implore you, send a pull request (is that what it's called?) if you feel so inclined.
